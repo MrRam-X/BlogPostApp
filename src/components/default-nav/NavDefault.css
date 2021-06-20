@@ -1,0 +1,16 @@
+.default-nav {
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #2e8fff;
+}
+li {
+  padding: 0 1em;
+}
