@@ -1,35 +1,37 @@
-//import Home from "./pages/Home";
 import "./App.css";
-
-//import User from "./components/users/User";
-import NavDefault from "./components/default-nav/NavDefault";
-import Default from "./pages/Default";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import { Route, Switch } from "react-router-dom";
-//import { useState } from "react";
-import CreatePost from "./components/users/CreatePost";
+import BasicNav from "./components/BasicNav";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import About from "./pages/About";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
-  //const [user, setUser] = useState(false);
   return (
     <div className="App">
-      <header className="container-header">
-        <h2>Post Blog App</h2>
-      </header>
+      <BasicNav />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
 
-      <div>
-        <NavDefault />
-        <Switch>
-          <Route path="/" exact>
-            <Default />
-          </Route>
-          <Route path="/create-post">
-            <CreatePost />
-          </Route>
-        </Switch>
-      </div>
+        <Route path="/profile">
+          <Profile />
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route path="/register">
+          <Register />
+        </Route>
+      </Switch>
     </div>
   );
 }

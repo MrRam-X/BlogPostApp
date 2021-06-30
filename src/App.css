@@ -1,9 +1,4 @@
-.container-header {
-  padding: 1em;
-  background-color: #444;
+Link {
+  text-decoration: none;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
